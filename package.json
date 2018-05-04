@@ -1,10 +1,10 @@
 {
-  "name": "nDaterangepicker",
-  "version": "0.1.19",
+  "name": "sfos-daterangepicker",
+  "version": "0.1.20",
   "description": "Angular.js wrapper for dangrossman/bootstrap-daterangepicker",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jeserkin/nDaterangepicker.git"
+    "url": "git://github.com/sfos/nDaterangepicker"
   },
   "dependencies": {},
   "devDependencies": {

@@ -597,6 +597,10 @@
             }
 
             if (!momentDate.isValid()) {
+               momentDate = moment(new Date(prepareDateString));
+            }
+
+            if (!momentDate.isValid()) {
               throw new Error('Passed in comparison model for "notLaterThan" validator is invalid!');
             }
 
@@ -631,6 +635,10 @@
 
             if (!momentDate.isValid()) {
               momentDate = moment(prepareDateString, scope.internalOptions.isoFormat);
+            }
+
+            if (!momentDate.isValid()) {
+              momentDate = moment(new Date(prepareDateString));
             }
 
             if (!momentDate.isValid()) {
@@ -674,6 +682,10 @@
             }
 
             if (!momentDate.isValid()) {
+              momentDate = moment(new Date(prepareDateString));
+            }
+
+            if (!momentDate.isValid()) {
               throw new Error('Passed in comparison model for "minDateLimit" validator is invalid!');
             }
 
@@ -709,6 +721,10 @@
 
             if (!momentDate.isValid()) {
               momentDate = moment(prepareDateString, scope.internalOptions.isoFormat);
+            }
+
+            if (!momentDate.isValid()) {
+               momentDate = moment(new Date(prepareDateString));
             }
 
             if (!momentDate.isValid()) {

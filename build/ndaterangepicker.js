@@ -1,5 +1,5 @@
 /**
- * nDaterangepicker 0.1.19
+ * nDaterangepicker 0.1.20
  * @author Eugene Serkin
  * @license MIT License http://opensource.org/licenses/MIT
  */
@@ -422,6 +422,9 @@
                         momentDate = moment(prepareDateString, scope.internalOptions.isoFormat);
                     }
                     if (!momentDate.isValid()) {
+                        momentDate = moment(new Date(prepareDateString));
+                    }
+                    if (!momentDate.isValid()) {
                         throw new Error('Passed in comparison model for "notLaterThan" validator is invalid!');
                     }
                     var modelAsMoment = _getMoment(model), preparedModelAsMoment = _getMoment(modelAsMoment.format(scope.internalOptions.format)), preparedMomentDate = _getMoment(momentDate.format(scope.internalOptions.format));
@@ -447,6 +450,9 @@
                         momentDate = moment(prepareDateString, scope.internalOptions.isoFormat);
                     }
                     if (!momentDate.isValid()) {
+                        momentDate = moment(new Date(prepareDateString));
+                    }
+                    if (!momentDate.isValid()) {
                         throw new Error('Passed in comparison model for "notEarlierThan" validator is invalid!');
                     }
                     var modelAsMoment = _getMoment(model), preparedModelAsMoment = _getMoment(modelAsMoment.format(scope.internalOptions.format)), preparedMomentDate = _getMoment(momentDate.format(scope.internalOptions.format));
@@ -469,6 +475,9 @@
                         momentDate = moment(prepareDateString, scope.internalOptions.isoFormat);
                     }
                     if (!momentDate.isValid()) {
+                        momentDate = moment(new Date(prepareDateString));
+                    }
+                    if (!momentDate.isValid()) {
                         throw new Error('Passed in comparison model for "minDateLimit" validator is invalid!');
                     }
                     var modelAsMoment = _getMoment(modelValue), preparedModelAsMoment = _getMoment(modelAsMoment.format(scope.internalOptions.format)), preparedMomentDate = _getMoment(momentDate.format(scope.internalOptions.format));
@@ -487,6 +496,9 @@
                     var prepareDateString = compareTo.replace(/^"|"$/g, ""), momentDate = moment(prepareDateString, scope.internalOptions.format);
                     if (!momentDate.isValid()) {
                         momentDate = moment(prepareDateString, scope.internalOptions.isoFormat);
+                    }
+                    if (!momentDate.isValid()) {
+                        momentDate = moment(new Date(prepareDateString));
                     }
                     if (!momentDate.isValid()) {
                         throw new Error('Passed in comparison model for "maxDate" validator is invalid!');
